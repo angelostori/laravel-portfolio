@@ -11,20 +11,20 @@
             </svg>
         </div>
         <h1 class="display-5 fw-bold">
-            Welcome to Laravel+Bootstrap <i class="bi bi-box"></i>
+            Ciao sono Angelo Stori - Web Developer <i class="bi bi-person-raised-hand"></i>
         </h1>
 
         <p class="col-md-8 fs-4">
-            This is a preset package with Bootstrap 5 views for laravel projects including laravel breeze/blade. It works from laravel 9.x to the latest release 11.x.
-            You can also use bootstrap icons out of the box.
+            Benvenuti nel mio portfolio personale.
         </p>
-        <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-primary btn-lg" type="button">Documentation</a>
+        <a href="#projects" class="btn btn-primary btn-lg" type="button">Progetti</a>
     </div>
 </div>
 
 <div class="content">
     <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
+        <h3>Motto</h3>
+        <p>Chi ci crede combatte. Chi ci crede supera tutti gli ostacoli. Chi ci crede vince.</p>
     </div>
 </div>
 @endsection
