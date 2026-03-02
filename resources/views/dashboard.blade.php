@@ -11,7 +11,7 @@
                 <div class="card-header">{{ __('User Dashboard') }}</div>
 
                 <div class="card-body">
-                    <a href="{{ route('projects.index') }}" class="btn btn-primary">Progetti</a>
+                    <a href="{{ route('projects.index') }}" class="btn btn-primary">Projects</a>
                 </div>
             </div>
         </div>

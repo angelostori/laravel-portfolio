@@ -1,0 +1,20 @@
+@extends('layouts.app')
+
+@section('title', $project->name)
+
+@section('content')
+
+<div class="card">
+    <div class="card-header">
+        {{ $project->name }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Cliente: {{ $project->client }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Periodo: {{ $project->period }}</h6>
+        <p class="card-text">{{ $project->description }}</p>
+    </div>
+</div>
+
+<a class="btn btn-primary" href="{{ route('projects.index') }}">Back to Projects</a>
+
+@endsection

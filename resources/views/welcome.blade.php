@@ -11,20 +11,20 @@
             </svg>
         </div>
         <h1 class="display-5 fw-bold">
-            Ciao sono Angelo Stori - Web Developer <i class="bi bi-person-raised-hand"></i>
+            Hi, I'm Angelo Stori - Web Developer <i class="bi bi-person-raised-hand"></i>
         </h1>
 
         <p class="col-md-8 fs-4">
-            Benvenuti nel mio portfolio personale.
+            I'm a passionate web developer with a strong background in creating dynamic and responsive websites. With expertise in HTML, CSS, JavaScript, and various frameworks, I strive to deliver high-quality web solutions that meet the needs of clients and users alike.
         </p>
-        <a href="{{ route('projects.index') }}" class="btn btn-primary btn-lg" type="button">Progetti</a>
+        <a href="{{ route('projects.index') }}" class="btn btn-primary btn-lg" type="button">Projects</a>
     </div>
 </div>
 
 <div class="content">
     <div class="container">
         <h3>Motto</h3>
-        <p>Chi ci crede combatte. Chi ci crede supera tutti gli ostacoli. Chi ci crede vince.</p>
+        <p>Who believes, conquers all obstacles. Who believes, wins.</p>
     </div>
 </div>
 @endsection
