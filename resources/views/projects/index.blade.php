@@ -8,8 +8,8 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Author</th>
-            <th>Category</th>
+            <th>Client</th>
+            <th>Period</th>
             <th>Description</th>
             <th></th>
         </tr>
