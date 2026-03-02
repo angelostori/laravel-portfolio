@@ -17,7 +17,7 @@
         <p class="col-md-8 fs-4">
             Benvenuti nel mio portfolio personale.
         </p>
-        <a href="#projects" class="btn btn-primary btn-lg" type="button">Progetti</a>
+        <a href="{{ route('projects.index') }}" class="btn btn-primary btn-lg" type="button">Progetti</a>
     </div>
 </div>
 
