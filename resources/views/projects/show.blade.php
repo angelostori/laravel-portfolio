@@ -9,8 +9,9 @@
         {{ $project->name }}
     </div>
     <div class="card-body">
-        <h5 class="card-title">Cliente: {{ $project->client }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Periodo: {{ $project->period }}</h6>
+        <h5 class="card-title">Type: {{ $project->type }}</h5>
+        <h6 class="card-subtitle my-4">Cliente: {{ $project->client }}</h6>
+        <h6 class="card-subtitle mb-4 text-muted">Periodo: {{ $project->period }}</h6>
         <p class="card-text">{{ $project->description }}</p>
     </div>
 </div>

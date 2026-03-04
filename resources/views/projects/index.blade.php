@@ -4,13 +4,13 @@
 
 @section('content')
 
-<table>
+<table class="m-auto">
     <thead>
         <tr>
             <th>Name</th>
             <th>Client</th>
             <th>Period</th>
-            <th>Description</th>
+            <th>Type</th>
             <th></th>
             <th></th>
         </tr>
@@ -21,7 +21,7 @@
             <td class="p-3">{{ $project->name }}</td>
             <td class="p-3">{{ $project->client }}</td>
             <td class="p-3">{{ $project->period }}</td>
-            <td class="p-3">{{ $project->description }}</td>
+            <td class="p-3">{{ $project->type }}</td>
             <td><a class="btn btn-outline-primary" href="{{ route('projects.show', $project) }}">Visit</a></td>
             @auth
             <td><a class="btn btn-outline-warning" href="{{ route('projects.edit', $project) }}">Update</a></td>
