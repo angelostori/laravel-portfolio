@@ -24,6 +24,8 @@ Route::get('/projects/create', [ProjectController::class, 'create'])
     ->middleware('auth')
     ->name('projects.create');
 Route::get('/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
-Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])
+    ->middleware('auth')
+    ->name('projects.edit');
 
 require __DIR__ . '/auth.php';
