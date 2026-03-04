@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-    <form>
+    <form action="{{ route('project.store') }}" method="POST">
         <div class="mb-3 row">
             <label for="name" class="fw-bold col-1 col-form-label">Name</label>
             <div class="col-8">

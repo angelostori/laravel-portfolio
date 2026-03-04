@@ -22,7 +22,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return "rotta create";
+        return view('projects.create');
     }
 
     /**
