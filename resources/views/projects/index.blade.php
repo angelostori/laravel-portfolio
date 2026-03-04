@@ -12,6 +12,7 @@
             <th>Period</th>
             <th>Description</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,9 @@
             <td class="p-3">{{ $project->period }}</td>
             <td class="p-3">{{ $project->description }}</td>
             <td><a class="btn btn-primary" href="{{ route('projects.show', $project) }}">Visit</a></td>
+            @auth
+            <td><a class="btn btn-warning" href="{{ route('projects.edit', $project) }}">Update</a></td>
+            @endauth
         </tr>
         @endforeach
 </table>

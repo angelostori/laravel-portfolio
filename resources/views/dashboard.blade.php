@@ -13,7 +13,6 @@
                 <div class="card-body">
                     <a href="{{ route('projects.index') }}" class="btn btn-primary">Projects</a>
                     <a href="{{ route('projects.create') }}" class="btn btn-success">Add Project</a>
-
                 </div>
             </div>
         </div>
