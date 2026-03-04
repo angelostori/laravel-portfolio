@@ -59,7 +59,7 @@ class ProjectController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return "ecco la edit del progetto n' $id";
     }
 
     /**
