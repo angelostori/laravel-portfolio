@@ -21,6 +21,7 @@ class ProjectSeeder extends Seeder
             $newProject->client = $faker->company();
             $newProject->period = $faker->date();
             $newProject->description = $faker->paragraph();
+            $newProject->type = $faker->sentence(3);
 
             $newProject->save();
         }
