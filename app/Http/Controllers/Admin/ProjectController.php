@@ -30,7 +30,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "questo è lo store";
     }
 
     /**
