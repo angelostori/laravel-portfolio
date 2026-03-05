@@ -40,17 +40,16 @@
                     placeholder="Period" />
             </div>
         </div>
-        <!--  <div class="mb-3 row">
+        <div class="mb-3 row">
             <label for="type" class="fw-bold col-1 col-form-label">Type</label>
             <div class="col-8">
-                <input
-                    type="text"
-                    class="form-control"
-                    name="type"
-                    id="type"
-                    placeholder="Type" />
+                <select class="form-select" name="type_id" id="type_id">
+                    @foreach ($types as $type)
+                    <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
             </div>
-        </div> -->
+        </div>
         <div class="mb-3 row">
             <label for="description" class="fw-bold col-1 col-form-label">Description</label>
             <div class="col-8">
