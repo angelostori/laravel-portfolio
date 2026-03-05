@@ -35,6 +35,7 @@ class ProjectController extends Controller
     {
         $data = $request->all();
 
+
         $newProject = new Project();
 
         $newProject->name = $data['name'];
@@ -64,7 +65,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projects.edit', compact('project'));
+        $types = Type::all();
+        return view('projects.edit', compact('project', 'types'));
     }
 
     /**
@@ -78,7 +80,7 @@ class ProjectController extends Controller
         $project->client = $data['client'];
         $project->period = $data['period'];
         $project->description = $data['description'];
-        $project->type = $data['type'];
+        $project->type_id = $data['type_id'];
 
         $project->update();
 

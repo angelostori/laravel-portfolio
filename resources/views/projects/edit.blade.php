@@ -48,13 +48,11 @@
         <div class="mb-3 row">
             <label for="type" class="fw-bold col-1 col-form-label">Type</label>
             <div class="col-8">
-                <input
-                    type="text"
-                    class="form-control"
-                    name="type"
-                    id="type"
-                    value="{{ $project->type }}"
-                    placeholder="Type" />
+                <select class="form-select" name="type_id" id="type_id">
+                    @foreach ($types as $type)
+                    <option value="{{ $type->id }}" {{ $project->type_id == $type->id ? 'selected' : '' }}>{{ $type->name }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
         <div class="mb-3 row">
