@@ -40,7 +40,7 @@
                     placeholder="Period" />
             </div>
         </div>
-        <div class="mb-3 row">
+        <!--  <div class="mb-3 row">
             <label for="type" class="fw-bold col-1 col-form-label">Type</label>
             <div class="col-8">
                 <input
@@ -50,7 +50,7 @@
                     id="type"
                     placeholder="Type" />
             </div>
-        </div>
+        </div> -->
         <div class="mb-3 row">
             <label for="description" class="fw-bold col-1 col-form-label">Description</label>
             <div class="col-8">
