@@ -38,7 +38,7 @@ class ProjectController extends Controller
         $newProject->client = $data['client'];
         $newProject->period = $data['period'];
         $newProject->description = $data['description'];
-        /* $newProject->type = $data['type']; */
+        $newProject->type = $data['type'];
 
         $newProject->save();
 

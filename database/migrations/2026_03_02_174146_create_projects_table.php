@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('client');
             $table->date('period');
             $table->text('description');
+            $table->string('type');
 
             $table->timestamps();
         });
