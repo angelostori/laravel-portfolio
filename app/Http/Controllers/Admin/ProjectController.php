@@ -49,7 +49,11 @@ class ProjectController extends Controller
 
         $newProject->save();
 
-        $newProject->technologies()->attach($data['technologies']);
+        // verifichiamo se stiamo ricevendo le technologies
+        if ($request->has('technologies')) {
+
+            $newProject->technologies()->attach($data['technologies']);
+        }
 
         return redirect()->route('projects.show', $newProject);
     }
@@ -69,7 +73,9 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $types = Type::all();
-        return view('projects.edit', compact('project', 'types'));
+        $technologies = Technology::all();
+
+        return view('projects.edit', compact('project', 'types', 'technologies'));
     }
 
     /**
@@ -86,6 +92,15 @@ class ProjectController extends Controller
         $project->type_id = $data['type_id'];
 
         $project->update();
+
+        // verifichiamo se stiamo ricevendo le technologies
+        if ($request->has('technologies')) {
+
+            // sincronizzare i checkbox con i valori della tabella pivot
+            $project->technologies()->sync($data['technologies']);
+        } else {
+            $project->technologies()->detach();
+        }
 
         return redirect()->route('projects.show', $project);
     }

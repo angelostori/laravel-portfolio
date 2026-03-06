@@ -6,7 +6,13 @@
 
 <div class="card">
     <div class="card-header">
-        {{ $project->name }}
+        Technologies:
+        @forelse($project->technologies as $tech)
+        <span class="badge" style="--bg-color: {{ $tech->color }}; background-color: var(--bg-color);">{{ $tech->name }}</span>
+        @empty
+        <span>-</span>
+        @endforelse
+
     </div>
     <div class="card-body">
         <h4 class="card-title">Type: {{ $project->type->name }}</h4>
