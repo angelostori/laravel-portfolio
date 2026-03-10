@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\Technology;
 use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -38,7 +39,6 @@ class ProjectController extends Controller
     {
         $data = $request->all();
 
-
         $newProject = new Project();
 
         $newProject->name = $data['name'];
@@ -46,6 +46,15 @@ class ProjectController extends Controller
         $newProject->period = $data['period'];
         $newProject->description = $data['description'];
         $newProject->type_id = $data['type_id'];
+
+        // controllo se l'utente ha chiesto l'upload di un'immagine
+        if (array_key_exists("img", $data)) {
+            // caricare l'immagine nello storage
+            // assegnare il percorso e il nome dell'immagine ad un a variabile
+            $img_url = Storage::putFile('projects', $data['img']);
+        }
+
+        // dd($data);
 
         $newProject->save();
 

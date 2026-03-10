@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-    <form action="{{ route('projects.store') }}" method="POST">
+    <form action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3 row">
             <label for="name" class="fw-bold col-1 col-form-label">Name</label>
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="mb-3 row">
-            <label for="type" class="fw-bold col-1 col-form-label">Type</label>
+            <label for="type_id" class="fw-bold col-1 col-form-label">Type</label>
             <div class="col-8">
                 <select class="form-select" name="type_id" id="type_id">
                     @foreach ($types as $type)
@@ -59,6 +59,12 @@
                     <label for="tech-{{ $technology->id }}">{{ $technology->name }}</label>
                 </div>
                 @endforeach
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="img" class="fw-bold col-1 col-form-label">Image</label>
+            <div class="col-8">
+                <input id="img" name="img" class="form-control" type="file">
             </div>
         </div>
         <div class="mb-3 row">
