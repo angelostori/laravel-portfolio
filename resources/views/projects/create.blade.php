@@ -64,15 +64,7 @@
         <div class="mb-3 row">
             <label for="img" class="fw-bold col-1 col-form-label">Image</label>
             <div class="col-8">
-                <div class="input-group">
-                    <button
-                        class="btn btn-outline-secondary"
-                        type="button"
-                        onclick="document.getElementById('img').click()">Choose a file</button>
-                    <input type="text" class="form-control" placeholder="No file chosen" readonly>
-
-                    <input id="img" name="img" class="form-control" type="file" hidden>
-                </div>
+                <input id="img" name="img" class="form-control" type="file" hidden>
             </div>
         </div>
         <div class="mb-3 row">

@@ -102,6 +102,19 @@ class ProjectController extends Controller
         $project->description = $data['description'];
         $project->type_id = $data['type_id'];
 
+        if ($request->hasFile('img')) {
+            // cancella solo se c'è una immagine precedente
+            if ($project->img) {
+                Storage::delete($project->img);
+            }
+
+            // caricare la nuova
+            $img_url = Storage::putFile('projects', $data['img']);
+
+            // aggiornare il db
+            $project->img = $img_url;
+        }
+
         $project->update();
 
         // verifichiamo se stiamo ricevendo le technologies
@@ -121,6 +134,10 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        if ($project->img) {
+            Storage::delete($project->img);
+        }
+
         $project->delete();
 
         return redirect()->route('projects.index');
