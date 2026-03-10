@@ -52,6 +52,8 @@ class ProjectController extends Controller
             // caricare l'immagine nello storage
             // assegnare il percorso e il nome dell'immagine ad un a variabile
             $img_url = Storage::putFile('projects', $data['img']);
+
+            $newProject->img = $img_url;
         }
 
         // dd($data);
